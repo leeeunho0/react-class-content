@@ -1,0 +1,24 @@
+/* JsxEx.css */
+
+/* 클래스 그룹명 디자인 
+실제 반응형 핸드폰, 노트북, 테블릿, 데스크탑 너비를 100프로 반영해서 디자인
+기본 세팅 브라우저의 전체 폰트크기를 기준으로 설정
+*/
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  /* 실무에서는 기본적으로 폰트 크기 설정 */
+  font-size: 16px;
+}
+/* rem 배수! 단위로 픽셀을 계산해서 사용한다. */
+
+.blog-post{
+  border: 2px solid #ccc;
+  border-radius: 30px;
+
+  margin-bottom: 20px;
+}

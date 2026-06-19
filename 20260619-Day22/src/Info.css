@@ -1,0 +1,58 @@
+/* Info.css */
+
+body{
+  padding: 60px;
+
+}
+.profile{
+  width: 300px;
+  height: 300px;
+  /* 테스트용 선을 그리기 */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  /* 가운데 정렬 */
+  text-align: center;
+
+  padding: 20px;
+
+/* 상위 클래스 기준잡기 */
+  position: relative;
+ 
+
+}
+.profile img{
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.profile p{
+  color: gray;
+  font-size: 13px;
+}
+.new{
+  padding: 3px 8px;
+  
+  display: inline;
+  border: 1px solid red;
+  background-color: lightcoral;
+  border-radius: 10px;
+  
+  /* 기준을 정하지 않으면 브라우저 기준 */
+  position: absolute;
+  top: 15px;
+  right: 60px;
+
+}
+.new span{
+  color: yellow;
+  
+}
+
+.profiles {
+  display: flex;
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
