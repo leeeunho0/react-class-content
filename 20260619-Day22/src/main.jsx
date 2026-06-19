@@ -7,11 +7,12 @@ import Info from './Info.jsx'
 import BoardList from './BoardList.jsx'
 import SnsPage from './SnsPage.jsx'
 import ProductPage from './ProductPage.jsx'
+import ReviewPage from './ReviewPage.jsx'
 
 // 시작점 (리액트 처음 시작)
 // index.html 파일과 리액트를 연결하는 시작점!
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ProductPage />
+    <ReviewPage />
   </StrictMode>,
 );
