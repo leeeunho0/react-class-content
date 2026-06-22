@@ -1,0 +1,274 @@
+/* index.css 
+현재 리액트에 모든 페이지 공통적으로 설정 리액트의 장점! 
+  - 새로운 태그를 만들 수있다.
+  - index.css 파일 하나에 공통되는 디자인을 작성하면 모든 페이지에 적용된다!
+
+*/
+
+*{
+  /* 모든 페이지는 마진과 패딩을 0으로 공통적으로 초기화한다. */
+  margin: 0;
+  padding: 0;
+
+  /* 
+  color-white: #ffffff;
+  --color-black: #050a13;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
+  */
+  /* color: #ffffff;
+  background-color: #050a13; */
+}
+
+.HomePage{
+  height: 800px;
+  position: relative;
+}
+
+.HomePage-menu{
+  display: flex;
+  justify-content: space-between;
+}
+.HomePage-menu ul{
+  display: flex;
+  list-style: none;
+
+}
+.HomePage-menu li{
+  
+  padding: 10px;
+}
+.HomePage-menu span{
+  padding: 5px;
+  border: 1px solid aqua;
+}
+
+
+.HomePage-main{
+  width: 300px;
+  height: 300px;
+  /* border: 1px solid red; */
+  
+  margin: 10px auto;
+  padding: 100px;
+
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+
+}
+.HomePage-main img{
+  width: 200px;
+  height: 200px;
+
+  border: 2px solid aqua;
+  border-radius: 100%;
+}
+.HomePage-main p{
+  margin: 5px;
+  font-size: 25px;
+  
+}
+
+.HomePage-main span{
+  color: aqua;
+}
+.HomePage-main button{
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+}
+.HomePage-btn{
+  position: absolute;
+
+  bottom: 20px;
+  right: 70px;
+
+  font-size: 50px;
+  padding: 20px;
+
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+
+
+
+/* About me page 디자인 */
+
+.about-me-box{
+  width: 1200px;
+
+  padding: 40px;
+  margin: 20px auto;
+  /* border: 1px solid red; */
+
+  /* 모든 텍스트는 가운데 정렬 */
+  text-align: center;
+}
+.about-me-box h2{
+  font-size: 40px;
+}
+.title{
+  font-size: 25px;
+  padding: 30px;
+}
+
+.my-stacks{
+  display: flex;
+  gap: 10px;
+  
+}
+.stack-card{
+  /* 자동으로 stack-card의 너비를 조절해줌.
+  1:1:1 비율이 된다. */
+  flex: 1;
+
+  background-color: #050a13;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+
+  height: 250px;
+
+  line-height: 50px;
+
+    /* 그림자 효과 카드가 살짝 떠보이게 */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+/* 아이콘 태그들은 기본적으로 택스트 처럼 동작한다. */
+.stack-card i{
+  color: aqua;
+  font-size: 80px;
+}
+
+
+
+
+
+
+/* my-work 디자인 */
+.my-work-box {
+  width: 100%;
+  background-color: #050a13;
+  color: white;
+  
+  padding: 40px;
+}
+
+.my-work-content-box {
+  width: 1200px;
+  margin: 0 auto;
+
+  text-align: center;
+
+}
+ul {
+  list-style: none;
+}
+/*  이미지들이 1:1:1:1로 자동 비율맞추고 싶을때는 */
+.project-meta {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.project-meta img {
+  flex: 1;
+  width: 100px;
+  border-radius: 20px;
+}
+.my-work-content-box ul{
+  display: flex;
+  padding: 30px;
+  gap: 40px;
+
+  justify-content: center;
+}
+.my-work-content-box ul li{
+  border: 1px solid #03e8f9;
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+.my-work-content-box h2{
+  font-size: 40px;
+}
+.my-work-content-box p{
+  font-size: 25px;
+  padding: 20px;
+}
+
+
+
+
+
+/* NaverBlogPage 디자인 */
+
+.naver-blog-box{
+  width: 100%;
+  /* background-color: #050a13;
+  color: white; */
+  
+  padding: 40px;
+}
+
+.naver-blog-content-box{
+  width: 1200px;
+  margin: 0 auto;
+
+  text-align: center;
+
+}
+ul {
+  list-style: none;
+}
+.naver-blog-content-box h2{
+  font-size: 50px;
+  padding-bottom: 80px;
+}
+.naver-blog-content-box ul{
+  display: flex;
+
+  padding: 10px 30px;
+  gap: 40px;
+
+  justify-content: left;
+
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+}
+.naver-blog-content-box ul span{
+  color: green;
+  font-weight: bold;
+}
+.blogs{
+  display: flex;
+  flex-direction: column;
+}
+.blogs img{
+  width: 150px;
+  height: 150px;
+}
+.blog-meta{
+  display: flex;
+  margin: 10px 50px;
+}
+.blog-meta-1 h3{
+  padding: 20px 0;
+}
+.blog-meta-1 p{
+  padding: 10px;
+}
+.blog-meta-1 span{
+  color: gray;
+  
+}
