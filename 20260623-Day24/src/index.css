@@ -1,0 +1,287 @@
+/* --accent: #aa3bff; */
+/* --accent-border: rgba(170, 59, 255, 0.5); */
+
+/* index.css 파일은 리액트 모든 파일에 공통적으로 적용된다! */
+
+*{
+  margin: 0;
+  padding: 0;
+
+  /* 너비를 계산할 때 안쪽여백인 패딩을 같이 계산해야된다.
+  1200px 패딩 20px --> 1240px 정렬, 레이아웃 망가질 수 있음
+
+  너비를 기준으로 안쪽에 패딩같이 계산
+  1200px 패딩 20px --> 오른쪽패딩 20  왼쪽 패딩 20 나머지 1160(content)
+  */
+  box-sizing: border-box;
+
+  /* 브라우저(크롬, 엣지, 사파리, 오페라, 파이어폭스..) 기본폰트크기를 고정
+  rem 단위 배수 단위로 px을 계산한다.
+  rem 단위는 기본 폰트 16px 기준으로 배수
+  반응형이나 웹 => 앱으로 자동으로 만들때 rem단위!
+
+  2rem => 32px;
+  1rem => 16px;
+  0.5rem => 8px;
+  */
+  font-size: 16px;
+
+  /* border-radius: 2rem; */
+}
+ul{
+  list-style: none;
+}
+.wrap{
+  width: 100%;
+}
+
+
+
+/* HotTopic.jsx 디자인 */
+
+.hot-topics{
+  padding: 30px;
+
+  /* 가운데로 고정하기 위한 디자인 */
+  width: 1000px;
+  margin: 0 auto;
+}
+.hot-topics span{
+  color: rgba(175, 13, 13, 0.5);
+  font-weight: bold;
+}
+
+.content-topics{
+  display: flex;
+  gap: 10px;
+}
+.title-topics{
+  /* 기본 가로! */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* 특정 위치에 있는 ul들만 정렬 */
+.title-topics ul{
+  display: flex;
+}
+.title-topics li{
+  border: 1px solid #ccc;
+  padding: 10px 15px; /* 0.4rem 1rem */
+  margin: 0 5px;
+
+  cursor: pointer;
+}
+.topic{
+  position: relative;
+  overflow: hidden;
+}
+.topic img{
+  /* 실무에서 많이 사용하는 단위! rem 
+  16 * 19 = 304px  */
+  width: 19rem;
+}
+.time-labs{
+  width: 19rem;
+  height: 100%;
+    
+  position: absolute;
+  /* bottom: 5px; */
+  top: 160px;
+
+  color: white;
+  background-color: royalblue;
+  text-align: center;
+
+  padding: 10px 0;
+  /* 실무에서는 속도감도 중요시 본다.
+  기본값이 시작할 때는 천천히 중간에 빨랐다가 다시 끝날때는 천천히 */
+  /* linear 처음부터 끝까지 일정한 속도감을 낸다 */
+  transition: 0.5s linear;
+
+  opacity: 0.8;
+}
+/* 
+.time-labs의 높이가 짧으면 중간에 멈출수도 있다. 그래서 img, topic 같이 hover 기능을 줘야한다.
+ */
+.time-labs:hover{
+  top: 0;
+  opacity: 0.8;
+  /* bottom: -160px; */
+}
+
+/* 실무에서는 디자인 변경할때는 css */
+.click-active{
+  background-color: black;
+  color: white;
+}
+
+
+
+
+
+
+
+/* PostPage.jsx 디자인 */
+
+.postpage-section{
+  width: 100%;
+  background-color: #ddd;
+}
+/* 헤더 전체 컨테이너 (좌우 끝 정렬 및 세로 가운데 정렬) */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa; /* 부드러운 밝은 회색 배경 */
+  border-bottom: 1px solid #eedede;
+}
+
+/* 왼쪽 영역 (로고 아이콘 + 글자들 세로 정렬) */
+.post-header-log {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 아이콘과 글자 사이 간격 */
+}
+
+/* 아이콘 크기 및 정렬 */
+.post-logo {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* 타이틀 글자 간격 설정 (자연스러운 세로 정렬을 위해 margin 제거) */
+.post-header-log h2,
+.post-header-log p {
+  margin: 2px 0; /* 위아래로 아주 최소한의 간격만 설정 */
+}
+
+/* 오른쪽 버튼 기본 디자인 */
+.post-header button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-search-box{
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.search-input input{
+  width: 80%;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+.search-input ul{
+  display: flex;
+  padding: 10px 5px;
+
+  gap: 20px;
+
+}
+.search-input button{
+  padding: 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+/* 
+.board-box{
+  width: 100%;
+  background-color: pink;
+}
+.board{
+  padding: 30px;
+  margin: 0 auto;
+
+  border: 1px solid red;
+}
+.board-title{
+  display: flex;
+  
+}
+.board-title h2{
+  font-size: 50px;
+  
+}
+.title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  border: 1px solid red;
+}
+.title button{
+  flex-direction: column;
+  
+
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: royalblue;
+  color: white;
+
+}
+.title-1 h2{
+  font-size: 20px;
+}
+.content{
+  margin: 20px auto;
+}
+
+.board-content{
+  padding: 10px;
+  margin: 0 auto;
+  width: 80%;
+  
+  background-color: white;
+  
+  border: 1px solid red;
+}
+.content-search{
+  background-color: #ddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+.content-search input{
+  
+  width: 90%;
+  margin: 10px;
+}
+.content-search ul{
+  display: flex;
+  gap: 20px;
+}
+.content-search li{
+  padding: 3px 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: aquamarine;
+}
+
+.bird{
+  
+  background-color: lightgray;
+
+}
+
+.bor{
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
+.bor span{
+
+  border: 1px solid #ccc;
+  color: yellow;
+  background-color: lightcoral;
+} */
