@@ -1,0 +1,53 @@
+/* index.css */
+/* 모든 리액트 파일에 공통적으로 적용! */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* 기본 폰트 설정 (rem 단위) */
+  /* rem은 배수 단위로 커지거나 작아진다. 
+    기본 브라우저 폰트크기를 기준이다! */
+  font-size: 16px;
+}
+ul{
+  /* 점 없애기 */
+  list-style: none;
+}
+
+/* 공통되는 반응형 740이하가 되면 기본적으로 글씨 크기가 작아진다.
+ 거기에 맞춰서 rem단위를 쓴 아이들은 자동적으로 줄어든다. */
+@media(max-width < 740px){
+  *{
+    font-size: 12px;
+
+  }
+}
+
+
+/* 모든 리액트 파일은 팝업형식으로 가운데 정렬 */
+.max-container{
+  /* 회대 너비 지정 */
+  width: 1000px;
+  height: 100vh;
+  /* 가운데 정렬 */
+  margin: 30px auto;
+
+  /* 안쪽 여백 */
+  padding: 30px;
+
+  background-color: beige;
+
+  border-radius: 40px;
+}
+
+
+
+/* AdminPage 디자인 */
+
+
+/* ControlTest2.css */
+.nav{
+  /* 커서를 손가락으로 바꾸기 */
+  cursor: pointer;
+}
