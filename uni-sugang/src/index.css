@@ -1,0 +1,645 @@
+/* index.css 웹페이지 공통 초기화 설정 */
+
+/* index.css에 테일윈드 디자인파일 포함하기
+   모든 리액트 파일에서 테일윈드 디자인 파일을 쓸 수 있다. */
+/* @import "tailwindcss"; */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/*  로그인 페이지 디자인 적용하기 */
+/* 1. 전체 화면 배경 설정 */
+.login-wrap {
+  min-height: 100vh;
+  background-color: #f8fafc; /* 연한 회색빛 청색 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. 중앙 로그인 카드 */
+.login-card {
+  background-color: #ffffff; /* 순백색 카드 배경 */
+  width: 100%;
+  max-width: 448px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.025);
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+/* 3. 상단 마크 원형 배경 */
+.login-logo-wrap {
+  display: inline-flex;
+  padding: 16px;
+  background-color: #eff6ff; /* 연한 블루 */
+  color: #2563eb; /* 메인 브랜드 블루 */
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.login-card h2 {
+  font-size: 24px;
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 4px;
+  margin-bottom: 28px;
+}
+
+/* 4. 입력 폼 디자인 */
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 14px 12px 40px; /* 아이콘 공간만큼 왼쪽 패딩 확보 */
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  font-size: 14px;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+/* 입력창 클릭(포커스) 시 푸른 빛 효과 */
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 5. 노란색 로그인 안내 상자 */
+.login-guide-box {
+  background-color: #fffbeb;
+  border: 1px solid #fef3c7;
+  color: #92400e;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  text-align: left;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.login-guide-box strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* 6. 파란색 로그인 버튼 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+
+
+/* Dashboard.jsx */
+/* 학생기본정보 디자인 */
+.dashboard-wrap{
+    min-height: 100vh;
+  background-color: #f8fafc; /* 연한 회색빛 청색 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.dashboard-card{
+  background-color: #ffffff; /* 순백색 카드 배경 */
+  width: 40%;
+  max-width: 448px;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.025);
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+.dashboard-card-student{
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f1f5f9;
+}
+.dashboard-card-student-point{
+  text-align: center;
+  background-color: #ccc;
+  border-radius: 15px;
+}
+
+/* 수강신청 공지사항 디자인 */
+/* .notice-card{
+  background-color: #ffffff; 
+  width: 60%;
+  max-width: 672x;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 2px 4px -1px rgba(0, 0, 0, 0.025);
+  border: 1px solid #f1f5f9;
+  text-align: center;
+}
+.notice-card-title{
+  display: flex;
+  justify-content: space-between;
+}
+.notice-card-title span{
+  border: none;
+  border-radius: 5px;
+
+  background-color: rgb(238, 127, 127);
+  color: red;
+}
+.notice{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+.notice-cont-1{
+  background-color: rgb(241, 213, 213);
+}
+
+.notice-1{
+  border: none;
+  border-radius: 5px;
+
+  background-color: red;
+  color: white;
+}
+
+.notice-2{
+  border: none;
+  border-radius: 5px;
+
+  background-color: #bbb;
+  color: white;
+}
+.notice-content{
+  margin: 10px;
+  text-align: left;
+  
+}
+.notice-card button{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+} */
+
+/* dashboard 디자인 */
+
+/* 1. 기본 초기화 및 배경 */
+.wrap {
+  min-height: 100vh;
+  background-color: #f8fafc; /* 연한 회색빛 청색 배경 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. 대시보드 레이아웃 (2분할 그리드) */
+.dash-box {
+  width: 100%;
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* 태블릿이나 PC 화면에서는 좌측(정보) : 우측(공지) 구조로 변경 */
+@media (min-width: 768px) {
+  .dash-box {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* 3. 공통 카드 스타일 */
+.dash-stu-info,
+.dash-sugang-notice {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.025);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 4. 좌측 패널: 학생 기본 정보 */
+.dash-stu-info h2 {
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 12px;
+}
+
+/* 제목 옆에 파란색 포인트 선 추가 */
+.dash-stu-info h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background-color: #2563eb;
+  border-radius: 2px;
+}
+
+.stu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stu-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+.stu-list li:last-child {
+  border-bottom: none;
+}
+
+.stu-list li span {
+  color: #64748b; /* 라벨은 차분한 회색 */
+}
+
+.stu-list li strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* 주석 팁으로 적어주신 '신청 가능 학점' 박스용 스타일 */
+.credit-limit-box {
+  margin-top: auto; /* 무조건 카드 바닥에 밀착 */
+  padding-top: 16px;
+  background-color: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+.credit-limit-box span {
+  font-size: 16px;
+  font-weight: 800;
+  color: #2563eb; /* 포인트 블루 */
+}
+
+
+/* 5. 우측 패널: 수강 신청 공지사항 */
+.dash-sugang-notice {
+  justify-content: space-between;
+}
+
+/* 공지사항 헤더 구역 */
+.dash-sugang-notice > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dash-sugang-notice h3 {
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.dash-sugang-notice h3 + p {
+  font-size: 11px;
+  font-weight: 700;
+  background-color: #fef2f2;
+  color: #dc2626;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* 개별 공지사항 아이템 상자 */
+.notice-imp, .notice {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+/* 긴급 공지 강조 효과 */
+.notice-imp {
+  background-color: #fff5f5;
+  border-color: #fee2e2;
+}
+
+/* 공지 제목 텍스트 (태그 포함된 줄) */
+.notice-imp > p, .notice > p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* 본문 내용 텍스트 (하위 p 태그) */
+.notice-imp > p > p, .notice > p > p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* 긴급/공지 뱃지 텍스트 */
+.notice-imp span, .notice span {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #ffffff;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.notice-imp span { background-color: #ef4444; } /* 긴급: 빨간색 */
+.notice span { background-color: #64748b; }     /* 일반: 회색 */
+
+/* 6. 하단 수강신청 이동 버튼 */
+.dash-sugang-notice button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px;
+  background-color: #0f172a; /* 신뢰감을 주는 다크 네이비 */
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.dash-sugang-notice button:hover {
+  background-color: #1e293b;
+}
+
+/* Sugang.jsx 디자인 */
+
+/* ==========================================================================
+   1. 기본 레이아웃 및 래퍼
+   ========================================================================== */
+.wrap {
+  min-height: 100vh;
+  background-color: #f4f7f6; /* 연한 회색빛 배경 */
+  padding: 40px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.sugang-box {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 상단 돌아가기 링크 스타일 */
+.sugang-box > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  width: fit-content;
+  transition: background-color 0.2s;
+}
+
+.sugang-box > a:hover {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   2. 개설 강좌 검색 바 (Search Bar)
+   ========================================================================== */
+.sugang-box > div:nth-child(2) {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* '개설 강좌 검색' 텍스트 */
+.sugang-box > div:nth-child(2) > p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+/* 검색 드롭다운(Select) */
+.sugang-box > div:nth-child(2) > select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  font-size: 14px;
+  min-width: 160px;
+  outline: none;
+  color: #334155;
+  cursor: pointer;
+}
+
+/* 검색 입력창(Input) */
+.sugang-box > div:nth-child(2) > input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  outline: none;
+  color: #334155;
+}
+
+.sugang-box > div:nth-child(2) > select:focus,
+.sugang-box > div:nth-child(2) > input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ==========================================================================
+   3. 테이블 공통 스타일 및 결과 영역
+   ========================================================================== */
+/* 한글 클래스명을 CSS 선택자로 사용할 때의 처리 */
+.과목.조회.결과,
+.최종.신청.내역 {
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+/* 표(Table) 기본 레이아웃 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f8fafc;
+  color: #475569;
+  font-weight: 600;
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+td {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  vertical-align: middle;
+}
+
+tr:hover td {
+  background-color: #f8fafc; /* 행 호버 시 은은한 배경색 */
+}
+
+/* 과목명 스타일 강조 */
+td:nth-child(2) {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* 구분 셀 내부 배지 느낌 연출 */
+td:first-child {
+  font-size: 13px;
+  color: #475569;
+}
+
+/* ==========================================================================
+   4. 신청 / 취소 버튼 스타일
+   ========================================================================== */
+/* 신청 파란색 버튼 */
+.과목.조회.결과 button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.과목.조회.결과 button:hover {
+  background-color: #1d4ed8;
+}
+
+/* 취소 빨간색 버튼 */
+.최종.신청.내역 button {
+  background-color: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fca5a5;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.최종.신청.내역 button:hover {
+  background-color: #fee2e2;
+}
