@@ -1,0 +1,65 @@
+/* index.css */
+/* 
+dev(Development) [주방]
+ - 개발자가 코드를 작성하면서 확인하는 환경
+ - npm run dev
+
+ 코드를 저장하면 바로 실행!
+ 에러를 자세히 보여줌 (실무.log)
+ 디버깅하기 (테스트)
+
+build (빌드) [완성된 음식]
+ - 개발이 끝난 후 사용자에게 배포함 파일을 만드는 과정
+ - npm run build
+ - 폴더 /dist 생성이 되면서 여기에 압축 파일들!
+ 파일의 크기 감소
+ 페이지 로딩 속도 향상
+ 사용자에게 더 빠른 서비스 제공!
+
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+img{
+  width: 40rem;
+  height: 25rem;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 2rem;
+}
+p{
+  /* rem 단위는 기본 브라우저의 폰트 기준으로 
+  배수 반응형 웹 앱을 만들 때 필수적으로 들어가는 단위 */
+  font-size: 2rem;
+}
+
+/* 모바일로 들어왔을때 기본 폰트 크기만 변경 */
+@media(max-width: 500px){
+  /* 기본 브라우저의 폰트 사이즈를 기준으로 배수! */
+  *{
+    font-size: 8px;
+  }
+}
+
+@media(min-width: 501px) and (max-width: 1026px){
+  *{
+    font-size: 12px;
+  }
+}
+
+@media(min-width: 1025px){
+  *{
+    font-size: 16px;
+  }
+}
+
+.card{
+  display: flex;
+}
