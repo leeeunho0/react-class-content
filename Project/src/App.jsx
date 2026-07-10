@@ -172,7 +172,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ textAlign: "center", color: "white", fontFamily: "Arial, sans-serif", padding: "10px", backgroundColor: "lightgreen", minHeight: "100vh" }}>
+    <div style={{ textAlign: "center", color: "white", fontFamily: "Arial, sans-serif", padding: "10px", backgroundColor: "lightgreen", minHeight: "90vh" }}>
       <h1 style={{ margin: "10px 0 5px 0" }}>🐍 스네이크 게임</h1>
       <p style={{ color: "#000000", fontSize: "17px", margin: "15px 0 10px 0" }}>PC 방향키 또는 하단 패드로 조작하세요!</p>
       
