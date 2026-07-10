@@ -13,6 +13,12 @@ import ApiTest4 from './ApiTest4';
 export default function App() {
   return (
     <div>
+
+      <Link to="/api4"><p>Api4 Test</p></Link>
+
+      <br /><br />
+      <hr />
+
       <Routes>
         {/* 메인페이지 보여줘  */}
         <Route path='/' element={<ApiTest2 />}></Route>
